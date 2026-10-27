@@ -451,6 +451,12 @@
   ],
   "route": {
     "rules": [
+     {
+        "domain": [
+          "lens.l.google.com"
+        ],
+        "outbound": "美国自动"
+      },
       {
         "rule_set": [
           "anti-ad"
@@ -592,6 +598,10 @@
         "outbound": "直连"
       },
       {
+        "rule_set": "ai",
+        "outbound": "👽AI"
+      },
+      {
         "rule_set": "geosite-category-ai-!cn",
         "outbound": "👽AI"
       },
@@ -698,6 +708,12 @@
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/REIJI007/AdBlock_Rule_For_Sing-box@main/adblock_reject.srs",
         "update_interval": "12h"
+      },
+      {
+        "tag": "ai",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/ai.srs"
       },
       {
         "tag": "whatsapp",
