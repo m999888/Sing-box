@@ -43,7 +43,19 @@
     "rules": [
       {
         "rule_set": [
+          "anti-ad"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
           "adblock"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "httpdns"
         ],
         "action": "reject"
       },
@@ -123,9 +135,130 @@
       "tag": "默认代理",
       "type": "selector",
       "outbounds": [
-        "日本自动",
-        "狮城自动",
         "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择"
+      ]
+    },
+    {
+      "tag": "Telegram",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择"
+      ]
+    },
+    {
+      "tag": "Spotify",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择"
+      ]
+    },
+    {
+      "tag": "YouTube",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择"
+      ]
+    },
+    {
+      "tag": "Google",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择"
+      ]
+    },
+    {
+      "tag": "Whatsapp",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择"
+      ]
+    },
+    {
+      "tag": "Github",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择"
+      ]
+    },
+    {
+      "tag": "Apple",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择",
+        "直连"
+      ]
+    },
+    {
+      "tag": "Microsoft",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择",
+        "直连"
+      ]
+    },
+    {
+      "tag": "TikTok",
+      "type": "selector",
+      "outbounds": [
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择"
+      ]
+    },
+    {
+      "tag": "Netflix",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
         "台湾自动",
         "美国自动",
         "自动选择"
@@ -139,121 +272,24 @@
       ]
     },
     {
-      "tag": "YouTube",
-      "type": "selector",
-      "outbounds": [
-        "日本自动",
-        "狮城自动",
-        "香港自动",
-        "台湾自动",
-        "美国自动",
-        "自动选择"
-      ]
-    },
-    {
-      "tag": "Google",
-      "type": "selector",
-      "outbounds": [
-        "日本自动",
-        "狮城自动",
-        "香港自动",
-        "台湾自动",
-        "美国自动",
-        "自动选择"
-      ]
-    },
-    {
-      "tag": "Github",
-      "type": "selector",
-      "outbounds": [
-        "日本自动",
-        "狮城自动",
-        "香港自动",
-        "台湾自动",
-        "美国自动",
-        "自动选择"
-      ]
-    },
-    {
-      "tag": "Telegram",
-      "type": "selector",
-      "outbounds": [
-        "日本自动",
-        "狮城自动",
-        "香港自动",
-        "台湾自动",
-        "美国自动",
-        "自动选择"
-      ]
-    },
-    {
-      "tag": "TikTok",
-      "type": "selector",
-      "outbounds": [
-        "日本自动",
-        "狮城自动",
-        "香港自动",
-        "台湾自动",
-        "美国自动",
-        "自动选择"
-      ]
-    },
-    {
-      "tag": "Netflix",
-      "type": "selector",
-      "outbounds": [
-        "日本自动",
-        "狮城自动",
-        "香港自动",
-        "台湾自动",
-        "美国自动",
-        "自动选择"
-      ]
-    },
-    {
       "tag": "Wallet",
       "type": "selector",
       "outbounds": [
-        "日本自动",
-        "狮城自动",
         "香港自动",
+        "狮城自动",
+        "日本自动",
         "台湾自动",
         "美国自动",
         "自动选择"
-      ]
-    },
-    {
-      "tag": "Steam",
-      "type": "selector",
-      "outbounds": [
-        "日本自动",
-        "狮城自动",
-        "香港自动",
-        "台湾自动",
-        "美国自动",
-        "自动选择"
-      ]
-    },
-    {
-      "tag": "Microsoft",
-      "type": "selector",
-      "outbounds": [
-        "日本自动",
-        "狮城自动",
-        "香港自动",
-        "台湾自动",
-        "美国自动",
-        "自动选择",
-        "直连"
       ]
     },
     {
       "tag": "OneDrive",
       "type": "selector",
       "outbounds": [
-        "日本自动",
-        "狮城自动",
         "香港自动",
+        "狮城自动",
+        "日本自动",
         "台湾自动",
         "美国自动",
         "自动选择",
@@ -261,16 +297,27 @@
       ]
     },
     {
-      "tag": "Apple",
+      "tag": "Steam",
       "type": "selector",
       "outbounds": [
-        "日本自动",
-        "狮城自动",
         "香港自动",
+        "狮城自动",
+        "日本自动",
         "台湾自动",
         "美国自动",
-        "自动选择",
-        "直连"
+        "自动选择"
+      ]
+    },
+    {
+      "tag": "GFW",
+      "type": "selector",
+      "outbounds": [
+        "香港自动",
+        "狮城自动",
+        "日本自动",
+        "台湾自动",
+        "美国自动",
+        "自动选择"
       ]
     },
     {
@@ -278,9 +325,9 @@
       "type": "selector",
       "outbounds": [
         "默认代理",
-        "日本自动",
-        "狮城自动",
         "香港自动",
+        "狮城自动",
+        "日本自动",
         "台湾自动",
         "美国自动",
         "自动选择",
@@ -362,23 +409,27 @@
       "type": "selector",
       "outbounds": [
         "默认代理",
-        "👽AI",
-        "YouTube",
+
+        "Spotify",
         "Google",
-        "Github",
+        "YouTube",
         "Telegram",
+        "Github",
+        "Microsoft",
+        "Whatsapp",
+        "Apple",
+        "👽AI",
         "TikTok",
         "Netflix",
         "Wallet",
         "Steam",
-        "Microsoft",
         "OneDrive",
-        "Apple",
+        "GFW",
         "漏网之鱼",
-        "台湾自动",
+        "香港自动",
         "日本自动",
         "狮城自动",
-        "香港自动",
+        "台湾自动",
         "美国自动",
         "手动选择",
         "自动选择",
@@ -402,7 +453,19 @@
     "rules": [
       {
         "rule_set": [
+          "anti-ad"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
           "adblock"
+        ],
+        "action": "reject"
+      },
+      {
+        "rule_set": [
+          "httpdns"
         ],
         "action": "reject"
       },
@@ -509,12 +572,32 @@
         "outbound": "GLOBAL"
       },
       {
+        "rule_set": "geosite-apple@cn",
+        "outbound": "直连"
+      },
+      {
+        "rule_set": "geosite-apple",
+        "outbound": "Apple"
+      },
+      {
         "rule_set": "geosite-private",
+        "outbound": "直连"
+      },
+      {
+        "rule_set": "games-cn",
+        "outbound": "直连"
+      },
+      {
+        "rule_set": "googlefcm",
         "outbound": "直连"
       },
       {
         "rule_set": "geosite-category-ai-!cn",
         "outbound": "👽AI"
+      },
+      {
+        "rule_set": "geoip-telegram",
+        "outbound": "Telegram"
       },
       {
         "rule_set": "geosite-youtube",
@@ -539,14 +622,6 @@
       {
         "rule_set": "geosite-microsoft",
         "outbound": "Microsoft"
-      },
-      {
-        "rule_set": "geosite-apple@cn",
-        "outbound": "直连"
-      },
-      {
-        "rule_set": "geosite-apple",
-        "outbound": "Apple"
       },
       {
         "rule_set": "geosite-telegram",
@@ -585,6 +660,14 @@
         "outbound": "Steam"
       },
       {
+        "rule_set": "whatsapp",
+        "outbound": "Whatsapp"
+      },
+      {
+        "rule_set": "spotify",
+        "outbound": "Spotify"
+      },
+      {
         "rule_set": "geosite-geolocation-!cn",
         "outbound": "默认代理"
       },
@@ -593,8 +676,8 @@
         "action": "resolve"
       },
       {
-        "rule_set": "geoip-telegram",
-        "outbound": "Telegram"
+        "rule_set": "gfw",
+        "outbound": "GFW"
       },
       {
         "rule_set": "geoip-cn",
@@ -603,11 +686,54 @@
     ],
     "rule_set": [
       {
+        "tag": "anti-ad",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://anti-ad.net/anti-ad-sing-box.srs",
+        "update_interval": "48h"
+      },
+      {
         "tag": "adblock",
         "type": "remote",
         "format": "binary",
         "url": "https://cdn.jsdelivr.net/gh/REIJI007/AdBlock_Rule_For_Sing-box@main/adblock_reject.srs",
-        "update_interval": "1h"
+        "update_interval": "12h"
+      },
+      {
+        "tag": "whatsapp",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://github.com/senshinya/singbox_ruleset/blob/main/rule/Whatsapp/Whatsapp.srs"
+      },
+      {
+        "tag": "gfw",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/gfw.srs"
+      },
+      {
+        "tag": "googlefcm",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/googlefcm.srs"
+      },
+      {
+        "tag": "spotify",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/spotify.srs"
+      },
+      {
+        "tag": "httpdns",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/httpdns.srs"
+      },
+      {
+        "tag": "games-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/games-cn.srs"
       },
       {
         "tag": [
@@ -677,7 +803,7 @@
       "tag": "http-in",
       "type": "http",
       "listen": "::",
-      "listen_port": 8080
+      "listen_port": 8088
     },
     {
       "tag": "socks-in",
