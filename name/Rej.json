@@ -1,0 +1,15 @@
+{
+"version": 1,
+"rules": [
+{
+"domain_keyword": [
+"stun",
+"webrtc"
+],
+"port": [
+3478,
+19302
+]
+}
+]
+}
