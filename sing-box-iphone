@@ -465,7 +465,7 @@
         "outbound": "🇨🇳直连"
       },
       {
-        "clash_mode": "geosite-privat",
+        "rule_set": "geosite-privat",
         "outbound": "🇨🇳直连"
       },
       {
