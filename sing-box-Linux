@@ -14,7 +14,7 @@
       {"query_type": ["HTTPS", "SVCB"], "action": "reject"},
       {"clash_mode": "Direct", "server": "ali"},
       {"clash_mode": "Global", "server": "fake-ip-dns-server"},
-      {"rule_set": ["fakeipfilter-cn", "geosite-cn", "geosite-microsoft@cn", "geosite-Apple@cn", "geosite-privat"], "server": "ali"},
+      {"rule_set": ["fakeipfilter-cn", "geosite-cn", "geosite-microsoft@cn", "geosite-Apple-!cn", "geosite-privat"], "server": "ali"},
       {"rule_set": "fakeipfilter-!cn", "server": "google"},
       {"type": "logical", "mode": "and", "rules": [{"query_type": ["A", "AAAA"]}, {"rule_set": "geosite-geolocation-!cn", "invert": true}], "action": "evaluate", "server": "google", "client_subnet": "223.5.5.0/24","timeout": "2s"},
       {"match_response": true, "rule_set": "geoip-cn", "server": "ali"},
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "tag": "Telegram",
+      "tag": "✈️Telegram",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "tag": "Spotify",
+      "tag": "🎵Spotify",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "tag": "YouTube",
+      "tag": "🎬YouTube",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -77,7 +77,7 @@
       ]
     },
     {
-      "tag": "Google",
+      "tag": "🌍Google",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "tag": "Whatsapp",
+      "tag": "📱Whatsapp",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "tag": "Github",
+      "tag": "🤖️Github",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "tag": "Twitter",
+      "tag": "📱Twitter",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -125,7 +125,7 @@
       ]
     },
     {
-      "tag": "Instagram",
+      "tag": "🎬Instagram",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -150,7 +150,7 @@
       ]
     },
     {
-      "tag": "Microsoft",
+      "tag": "🌍Microsoft",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "tag": "TikTok",
+      "tag": "🎬TikTok",
       "type": "selector",
       "outbounds": [
         "🇸🇬狮城自动",
@@ -174,7 +174,7 @@
       ]
     },
     {
-      "tag": "Netflix",
+      "tag": "🎬Netflix",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -194,7 +194,7 @@
       ]
     },
     {
-      "tag": "Wallet🪙",
+      "tag": "💰Wallet",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -207,7 +207,7 @@
       ]
     },
     {
-      "tag": "Games",
+      "tag": "🎮Games",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -220,9 +220,22 @@
       ]
     },
     {
-      "tag": "Facebook",
+      "tag": "📱Facebook",
       "type": "selector",
       "outbounds": [
+        "🇭🇰香港自动",
+        "🇸🇬狮城自动",
+        "🇯🇵日本自动",
+        "🇹🇼台湾自动",
+        "🇺🇸美国自动",
+        "⚙️ 自动策略"
+      ]
+    },
+    {
+      "tag": "📱Samsung",
+      "type": "selector",
+      "outbounds": [
+        "🇨🇳直连",
         "🇭🇰香港自动",
         "🇸🇬狮城自动",
         "🇯🇵日本自动",
@@ -320,22 +333,23 @@
       "type": "selector",
       "outbounds": [
         "✈️节点选择",
-        "Spotify",
-        "Google",
-        "YouTube",
-        "Telegram",
-        "Github",
-        "Microsoft",
-        "Twitter",
-        "Instagram",
-        "Facebook",
-        "Whatsapp",
+        "🎵Spotify",
+        "🌍Google",
+        "🎬YouTube",
+        "✈️Telegram",
+        "🤖️Github",
+        "🌍Microsoft",
+        "📱Twitter",
+        "🎬Instagram",
+        "📱Facebook",
+        "📱Whatsapp",
         "🍏Apple",
         "👽AI",
-        "TikTok",
-        "Netflix",
-        "Wallet🪙",
-        "Games",
+        "🎬TikTok",
+        "🎬Netflix",
+        "💰Wallet",
+        "🎮Games",
+        "📱Samsung",
         "🐟 漏网之鱼",
         "🇭🇰香港自动",
         "🇯🇵日本自动",
@@ -478,80 +492,84 @@
         "outbound": "👽AI"
       },
       {
-        "rule_set": "geosite-Apple@cn",
-        "outbound": "🇨🇳直连"
-      },
-      {
         "rule_set": "apple",
         "outbound": "🍏Apple"
+      },
+      {
+        "rule_set": "geosite-Apple-!cn",
+        "outbound": "✈️节点选择"
       },
       {
         "rule_set": "games-cn",
         "outbound": "🇨🇳直连"
       },
       {
-        "rule_set": "googlefcm",
-        "outbound": "🇨🇳直连"
+        "rule_set": "telegram",
+        "outbound": "✈️Telegram"
       },
       {
         "rule_set": "spotify",
-        "outbound": "Spotify"
+        "outbound": "🎵Spotify"
       },
       {
         "rule_set": "youtube",
-        "outbound": "YouTube"
+        "outbound": "🎬YouTube"
       },
       {
         "rule_set": "github",
-        "outbound": "Github"
+        "outbound": "🤖️Github"
+      },
+      {
+        "rule_set": "microsoft",
+        "outbound": "🌍Microsoft"
       },
       {
         "rule_set": "geosite-microsoft@cn",
         "outbound": "🇨🇳直连"
       },
       {
-        "rule_set": "microsoft",
-        "outbound": "Microsoft"
-      },
-      {
-        "rule_set": "telegram",
-        "outbound": "Telegram"
-      },
-      {
         "rule_set": "whatsapp",
-        "outbound": "Whatsapp"
+        "outbound": "📱Whatsapp"
       },
       {
         "rule_set": "twitter",
-        "outbound": "Twitter"
-      },
-      {
-        "rule_set": "facebook",
-        "outbound": "Facebook"
+        "outbound": "📱Twitter"
       },
       {
         "rule_set": "instagram",
-        "outbound": "Instagram"
+        "outbound": "🎬Instagram"
       },
       {
-        "rule_set": "tiktok",
-        "outbound": "TikTok"
+        "rule_set": "facebook",
+        "outbound": "📱Facebook"
       },
       {
-        "rule_set": "netflix",
-        "outbound": "Netflix"
+        "rule_set": "Samsung",
+        "outbound": "📱Samsung"
       },
       {
-        "rule_set": "paypal",
-        "outbound": "Wallet🪙"
-      },
-      {
-        "rule_set": "crypto",
-        "outbound": "Wallet🪙"
+        "rule_set": "googlefcm",
+        "outbound": "🇨🇳直连"
       },
       {
         "rule_set": "google",
-        "outbound": "Google"
+        "outbound": "🌍Google"
+      },
+      {
+        "rule_set": "tiktok",
+        "outbound": "🎬TikTok"
+      },
+      {
+        "rule_set": "netflix",
+        "outbound": "🎬Netflix"
+      },
+      {
+        "rule_set": "crypto",
+        "outbound": "💰Wallet"
+      },
+      {
+        "rule_set": "paypal",
+        "outbound": "💰Wallet"
       },
       {
         "rule_set": "geosite-geolocation-!cn",
@@ -581,7 +599,7 @@
         "tag": "ai",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/ai.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/ai.srs"
       },
       {
         "tag": "whatsapp",
@@ -590,58 +608,64 @@
         "url": "https://magicrule.pages.dev/data/_shared/artifacts/Whatsapp_source-srs_fd89427363bce563.srs"
       },
       {
+        "tag": "Samsung",
+        "type": "remote",
+        "format": "source",
+        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Samsung_source_daeeafa85338e241.json"
+      },
+      {
         "tag": "telegram",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Telegram_source-srs_63cf21184477df1d.srs"
+        "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs"
       },
       {
         "tag": "global分流",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Global_source-srs_dc7b5e25723f6c16.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version3/gfw.srs"
       },
       {
         "tag": "googlefcm",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/GoogleFCM_source-srs_6fa428f2720fb28d.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version3/googlefcm.srs"
       },
       {
         "tag": "spotify",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Spotify_source-srs_01e8298209fc0d8a.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/spotify.srs"
       },
       {
         "tag": "Privacy隐私保护",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Privacy_source-srs_7e7e21ea3c548a8d.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version3/httpdns.srs"
       },
       {
         "tag": "fakeipfilter-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/China_source-srs_77939d32c7747736.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/cn.srs"
       },
       {
         "tag": "fakeipfilter-!cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/fake-ip-filter.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/fake-ip-filter.srs"
       },
       {
         "tag": "youtube",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/YouTube_source-srs_9ecee37860130f5e.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/youtube.srs"
       },
       {
         "tag": "google",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Google_source-srs_4c7a675d8e7e91b4.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/google.srs"
       },
       {
         "tag": "github",
@@ -653,73 +677,73 @@
         "tag": "microsoft",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Microsoft_source-srs_8f11490687e99fbe.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/microsoft.srs"
       },
       {
         "tag": "geosite-microsoft@cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/microsoft-cn.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/microsoft-cn.srs"
       },
       {
-        "tag": "geosite-Apple@cn",
+        "tag": "geosite-Apple-!cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/AppleDirect_source-srs_e6212c180f446669.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/apple-proxy.srs"
       },
       {
         "tag": "apple",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Apple_source-srs_5d919d6bce8fe843.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/apple.srs"
       },
       {
         "tag": "tiktok",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/TikTok_source-srs_3d899147a74104c0.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/tiktok.srs"
       },
       {
         "tag": "netflix",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Netflix_source-srs_327145e61a9ac31a.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/netflix.srs"
       },
       {
         "tag": "paypal",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/PayPal_source-srs_0fe86794e992baf7.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/paypal.srs"
       },
       {
         "tag": "crypto",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Cryptocurrency_source-srs_59f10d3303999f35.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/crypto.srs"
       },
       {
         "tag": "games-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/games-cn.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/games-cn.srs"
       },
       {
         "tag": "games",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/GlobalGame_source-srs_37d663757d63813f.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/games.srs"
       },
       {
         "tag": "geosite-geolocation-!cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/Global_source-srs_dc7b5e25723f6c16.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/proxy.srs"
       },
       {
         "tag": "geosite-cn",
         "type": "remote",
         "format": "binary",
-        "url": "https://magicrule.pages.dev/data/_shared/artifacts/China_source-srs_77939d32c7747736.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/cn.srs"
       },
       {
         "tag": "twitter",
@@ -743,7 +767,7 @@
         "tag": "geosite-privat",
         "type": "remote",
         "format": "binary",
-        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version1/private.srs"
+        "url": "https://gh-proxy.com/https://github.com/QuixoticHeart/rule-set/raw/refs/heads/ruleset/singbox/version2/private.srs"
       },
       {
         "tag": "geosite-Block",
