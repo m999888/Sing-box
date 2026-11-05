@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain_suffix": [
+        "jable.tv",
+        "missav.ws"
+      ],
+      "domain_keyword": [
+        "jable",
+        "missav",
+        "stun",
+        "webrtc"
+      ],
+      "port": [
+        3478,
+        19302
+      ]
+    }
+  ]
+}
