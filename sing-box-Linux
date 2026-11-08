@@ -5,7 +5,7 @@
       {"tag": "local", "type": "local", "prefer_go": true},
       {"tag": "ali", "type": "https", "server": "223.5.5.5"},
       {"tag": "tx", "type": "https", "server": "doh.pub", "domain_resolver": "hosts"},
-      {"tag": "google", "type": "https", "server": "8.8.8.8", "detour": "✈️节点选择"},
+      {"tag": "google", "type": "https", "server": "8.8.8.8", "detour": "♻️节点选择"},
       {"tag": "fake-ip-dns-server", "type": "fakeip", "inet4_range": "198.19.0.0/16"},
       {"type": "hosts", "tag": "hosts", "predefined": {"doh.pub": ["1.12.12.21", "120.53.53.53"]}}
     ],
@@ -14,8 +14,8 @@
       {"query_type": ["HTTPS", "SVCB"], "action": "reject"},
       {"clash_mode": "Direct", "server": "ali"},
       {"clash_mode": "Global", "server": "fake-ip-dns-server"},
-      {"rule_set": ["fakeipfilter-cn", "geosite-cn", "geosite-microsoft@cn", "geosite-Apple-!cn", "geosite-privat"], "server": "ali"},
-      {"rule_set": "fakeipfilter-!cn", "server": "google"},
+      {"rule_set": ["fakeipfilter-cn", "geosite-cn", "geosite-microsoft@cn", "geosite-privat", "apple", "games-cn", "Samsung"], "server": "ali"},
+      {"rule_set": ["fakeipfilter-!cn", "geosite-Apple-!cn"],"server": "google"},
       {"type": "logical", "mode": "and", "rules": [{"query_type": ["A", "AAAA"]}, {"rule_set": "geosite-geolocation-!cn", "invert": true}], "action": "evaluate", "server": "google", "client_subnet": "223.5.5.0/24","timeout": "2s"},
       {"match_response": true, "rule_set": "geoip-cn", "server": "ali"},
       {"query_type": ["A", "AAAA"], "server": "fake-ip-dns-server", "rewrite_ttl": 1}
@@ -28,7 +28,7 @@
   },
   "outbounds": [
     {
-      "tag": "✈️节点选择",
+      "tag": "♻️节点选择",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -77,7 +77,7 @@
       ]
     },
     {
-      "tag": "🌍Google",
+      "tag": "🔍Google",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -113,7 +113,7 @@
       ]
     },
     {
-      "tag": "📱Twitter",
+      "tag": "📲Twitter",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -150,7 +150,7 @@
       ]
     },
     {
-      "tag": "🌍Microsoft",
+      "tag": "Microsoft",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -220,7 +220,7 @@
       ]
     },
     {
-      "tag": "📱Facebook",
+      "tag": "📲Facebook",
       "type": "selector",
       "outbounds": [
         "🇭🇰香港自动",
@@ -248,7 +248,7 @@
       "tag": "🐟 漏网之鱼",
       "type": "selector",
       "outbounds": [
-        "✈️节点选择",
+        "♻️节点选择",
         "🇭🇰香港自动",
         "🇸🇬狮城自动",
         "🇯🇵日本自动",
@@ -263,48 +263,48 @@
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 0
+      "interval": "5m",
+      "tolerance": 10
     },
     {
       "tag": "🇹🇼台湾自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 0
+      "interval": "5m",
+      "tolerance": 10
     },
     {
       "tag": "🇯🇵日本自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 0
+      "interval": "5m",
+      "tolerance": 10
     },
     {
       "tag": "🇸🇬狮城自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 0
+      "interval": "5m",
+      "tolerance": 10
     },
     {
       "tag": "🇭🇰香港自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 0
+      "interval": "5m",
+      "tolerance": 10
     },
     {
       "tag": "🇺🇸美国自动",
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 0
+      "interval": "5m",
+      "tolerance": 10
     },
     {
       "tag": "手动选择",
@@ -316,8 +316,8 @@
       "type": "urltest",
       "outbounds": [],
       "url": "https://www.gstatic.com/generate_204",
-      "interval": "3m",
-      "tolerance": 0
+      "interval": "5m",
+      "tolerance": 10
     },
     {
       "tag": "延迟辅助",
@@ -332,16 +332,16 @@
       "tag": "GLOBAL",
       "type": "selector",
       "outbounds": [
-        "✈️节点选择",
+        "♻️节点选择",
         "🎵Spotify",
-        "🌍Google",
+        "🔍Google",
         "🎬YouTube",
         "✈️Telegram",
         "🤖️Github",
-        "🌍Microsoft",
-        "📱Twitter",
+        "Microsoft",
+        "📲Twitter",
         "🎬Instagram",
-        "📱Facebook",
+        "📲Facebook",
         "📱Whatsapp",
         "🍏Apple",
         "👽AI",
@@ -492,12 +492,12 @@
         "outbound": "👽AI"
       },
       {
-        "rule_set": "apple",
-        "outbound": "🍏Apple"
+        "rule_set": "geosite-Apple-!cn",
+        "outbound": "♻️节点选择"
       },
       {
-        "rule_set": "geosite-Apple-!cn",
-        "outbound": "✈️节点选择"
+        "rule_set": "apple",
+        "outbound": "🍏Apple"
       },
       {
         "rule_set": "games-cn",
@@ -521,7 +521,7 @@
       },
       {
         "rule_set": "microsoft",
-        "outbound": "🌍Microsoft"
+        "outbound": "Microsoft"
       },
       {
         "rule_set": "geosite-microsoft@cn",
@@ -533,7 +533,7 @@
       },
       {
         "rule_set": "twitter",
-        "outbound": "📱Twitter"
+        "outbound": "📲Twitter"
       },
       {
         "rule_set": "instagram",
@@ -541,7 +541,7 @@
       },
       {
         "rule_set": "facebook",
-        "outbound": "📱Facebook"
+        "outbound": "📲Facebook"
       },
       {
         "rule_set": "Samsung",
@@ -553,7 +553,7 @@
       },
       {
         "rule_set": "google",
-        "outbound": "🌍Google"
+        "outbound": "🔍Google"
       },
       {
         "rule_set": "tiktok",
@@ -573,14 +573,14 @@
       },
       {
         "rule_set": "geosite-geolocation-!cn",
-        "outbound": "✈️节点选择"
+        "outbound": "♻️节点选择"
       },
       {
         "action": "resolve"
       },
       {
         "rule_set": "global分流",
-        "outbound": "✈️节点选择"
+        "outbound": "♻️节点选择"
       },
       {
         "rule_set": "geoip-cn",
