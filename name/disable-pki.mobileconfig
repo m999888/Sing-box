@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadType</key>
+			<string>com.apple.applicationaccess</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PayloadIdentifier</key>
+			<string>org.example.disable-ota-pki.restrictions</string>
+			<key>PayloadUUID</key>
+			<string>4BF543D3-69EF-493A-B1B4-4887DDBAF30E</string>
+			<key>PayloadDisplayName</key>
+			<string>Certificate Trust OTA Update Restriction</string>
+			<key>PayloadDescription</key>
+			<string>Prevents over-the-air PKI trust updates. Does not disable CRL/OCSP checks.</string>
+			<key>allowOTAPKIUpdates</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>PayloadIdentifier</key>
+	<string>org.example.disable-ota-pki</string>
+	<key>PayloadUUID</key>
+	<string>B878BF46-3792-416F-9852-1F47A90F3B12</string>
+	<key>PayloadDisplayName</key>
+	<string>Disable OTA PKI Updates</string>
+	<key>PayloadDescription</key>
+	<string>Apple restriction: allowOTAPKIUpdates = false. Does not block operating system updates. Remove this profile to restore the default PKI update policy.</string>
+	<key>PayloadOrganization</key>
+	<string>Local configuration</string>
+</dict>
+</plist>
