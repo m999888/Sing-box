@@ -8,7 +8,9 @@
         "mesu.apple.com",
         "xp.apple.com",
         "gdmf.apple.com"
-      ],
+      ]
+    },
+    {
       "domain_suffix": [
         "gdmf-ados.apple.com",
         "updates.cdn-apple.com",
@@ -19,16 +21,24 @@
         "unityads.unity3d.com",
         "jable.tv",
         "missav.ws"
-      ],
+      ]
+    },
+    {
       "domain_keyword": [
         "jable",
-        "missav",
-        "stun",
-        "webrtc"
-      ],
+        "missav"
+      ]
+    },
+    {
       "port": [
         3478,
         19302
+      ]
+    },
+    {
+      "domain_keyword": [
+        "stun",
+        "webrtc"
       ]
     }
   ]
