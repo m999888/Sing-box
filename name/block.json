@@ -1,44 +1,21 @@
 {
-  "version": 1,
+  "version": 2,
   "rules": [
     {
-      "domain": [
-        "ns.itunes.apple.com",
-        "appldnld.apple.com",
-        "mesu.apple.com",
-        "xp.apple.com",
-        "gdmf.apple.com"
-      ]
-    },
-    {
       "domain_suffix": [
+        "gdmf.apple.com",
         "gdmf-ados.apple.com",
+        "mesu.apple.com",
         "updates.cdn-apple.com",
-        "updates-http.cdn-apple.com",
-        "iadsdk.apple.com",
-        "ads.internal.unity3d.com",
-        "ads.prd.ie.internal.unity3d.com",
-        "unityads.unity3d.com",
-        "jable.tv",
-        "missav.ws"
-      ]
-    },
-    {
-      "domain_keyword": [
-        "jable",
-        "missav"
-      ]
-    },
-    {
-      "port": [
-        3478,
-        19302
-      ]
-    },
-    {
+        "updates-http.cdn-apple.com"
+      ],
       "domain_keyword": [
         "stun",
         "webrtc"
+      ],
+      "port": [
+        3478,
+        19302
       ]
     }
   ]
