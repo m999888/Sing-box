@@ -8,11 +8,15 @@
         "mesu.apple.com",
         "updates.cdn-apple.com",
         "updates-http.cdn-apple.com"
-      ],
+      ]
+    },
+    {
       "domain_keyword": [
         "stun",
         "webrtc"
-      ],
+      ]
+    },
+    {
       "port": [
         3478,
         19302
